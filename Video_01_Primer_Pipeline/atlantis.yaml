@@ -1,0 +1,13 @@
+version: 3
+automerge: false
+parallel_plan: false
+parallel_apply: false
+projects:
+  - name: bucket
+    dir: ./s3
+    workspace: testing
+    workflow: testing
+    terraform_version: v1.3.4
+    autoplan:
+      when_modified: [ "*.tf" ]
+      enabled: true
